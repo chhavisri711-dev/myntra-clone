@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Myntra Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+
+    <header class="header" id="home">
+
+        <div class="logo">
+            <h2>MYNTRA<span>.</span></h2>
+        </div>
+
+        <nav class="navbar">
+            <a href="#men">MEN</a>
+            <a href="#women">WOMEN</a>
+            <a href="#kids">KIDS</a>
+            <a href="#beauty">BEAUTY</a>
+            <a href="#products">PRODUCTS</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" id="searchInput"
+            placeholder="Search for products, brands and more">
+
+            <button onclick="searchProducts()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="icons">
+            <a href="#profile"><i class="fa-regular fa-user"></i> Profile</a>
+            <a href="#wishlist"><i class="fa-regular fa-heart"></i> Wishlist</a>
+            <a href="#bag"><i class="fa-solid fa-bag-shopping"></i>
+                Bag (<span id="bagCount">0</span>)
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN SECTION -->
+
+    <main>
+
+        <!-- HERO BANNER -->
+
+        <section class="banner">
+
+            <div class="banner-content">
+                <p>THE BIGGEST FASHION SALE</p>
+
+                <h1>FASHION FESTIVAL</h1>
+
+                <h2>UP TO 70% OFF</h2>
+
+                <p>Upgrade Your Style With The Latest Trends</p>
+
+                <a href="#products" class="shop-btn">
+                    SHOP NOW
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- OFFER SECTION -->
+
+        <section class="offer">
+
+            <h2>MEGA FASHION OFFER</h2>
+
+            <p>
+                Extra <b>10% OFF</b> on your first order!
+                Use Code: <strong>MYNTRA10</strong>
+            </p>
+
+            <small>*Terms and conditions apply.</small>
+
+        </section>
+
+
+        <!-- CATEGORY SECTION -->
+
+        <section class="category-section" id="categories">
+
+            <h1 class="heading">SHOP BY CATEGORY</h1>
+
+            <div class="categories">
+
+                <article class="category" id="men">
+                    <img src="MenImage.jpeg" alt="Men Fashion">
+                    <h3>MEN</h3>
+                    <p>Explore Men's Fashion</p>
+                    <a href="#products">Explore Now</a>
+                </article>
+
+                <article class="category" id="women">
+                    <img src="WomenImage.jpeg" alt="Women Fashion">
+                    <h3>WOMEN</h3>
+                    <p>Discover New Trends</p>
+                    <a href="#products">Explore Now</a>
+                </article>
+
+                <article class="category" id="kids">
+                    <img src="KidsImage.jpeg" alt="Kids Fashion">
+                    <h3>KIDS</h3>
+                    <p>Fashion For Little Ones</p>
+                    <a href="#products">Explore Now</a>
+                </article>
+
+                <article class="category" id="beauty">
+                    <img src="BeautyImage.jpeg" alt="Beauty Products">
+                    <h3>BEAUTY</h3>
+                    <p>Beauty And Personal Care</p>
+                    <a href="#products">Explore Now</a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCT SECTION -->
+
+        <section class="product-section" id="products">
+
+            <h1 class="heading">TRENDING PRODUCTS</h1>
+
+            <p class="subheading">
+                Discover the latest fashion collection
+            </p>
+
+            <div class="products">
+
+                <article class="product">
+                    <span class="discount">40% OFF</span>
+
+                    <img src="product5.jpeg" alt="Men T-Shirt">
+
+                    <h3>Men Casual T-Shirt</h3>
+
+                    <p>Stylish cotton T-shirt</p>
+
+                    <h4>₹599
+                        <del>₹999</del>
+                    </h4>
+
+                    <button onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+                </article>
+
+
+                <article class="product">
+                    <span class="discount">50% OFF</span>
+
+                    <img src="product6.jpeg" alt="Women Dress">
+
+                    <h3>Women Western Dress</h3>
+
+                    <p>Elegant party wear dress</p>
+
+                    <h4>₹799
+                        <del>₹1599</del>
+                    </h4>
+
+                    <button onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+                </article>
+
+
+                <article class="product">
+                    <span class="discount">30% OFF</span>
+
+                    <img src="product7.jpeg" alt="Shoes">
+
+                    <h3>Casual Sneakers</h3>
+
+                    <p>Comfortable daily wear shoes</p>
+
+                    <h4>₹1399
+                        <del>₹1999</del>
+                    </h4>
+
+                    <button onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+                </article>
+
+
+                <article class="product">
+                    <span class="discount">25% OFF</span>
+
+                    <img src="product8.jpeg" alt="Beauty Product">
+
+                    <h3>Beauty Care Kit</h3>
+
+                    <p>Complete beauty essentials</p>
+
+                    <h4>₹899
+                        <del>₹1199</del>
+                    </h4>
+
+                    <button onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SIZE CHART TABLE -->
+
+        <section class="size-section">
+
+            <h2 class="heading">SIZE GUIDE</h2>
+
+            <table>
+
+                <caption>Fashion Size Chart</caption>
+
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Chest</th>
+                        <th>Waist</th>
+                        <th>Length</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>S</td>
+                        <td>36</td>
+                        <td>30</td>
+                        <td>26</td>
+                    </tr>
+
+                    <tr>
+                        <td>M</td>
+                        <td>38</td>
+                        <td>32</td>
+                        <td>27</td>
+                    </tr>
+
+                    <tr>
+                        <td>L</td>
+                        <td>40</td>
+                        <td>34</td>
+                        <td>28</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <small>Measurements are in inches.</small>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+
+        <section class="about" id="profile">
+
+            <h2>ABOUT OUR STORE</h2>
+
+            <p>
+                Welcome to Myntra Fashion Store.
+                We bring you the latest fashion trends
+                at affordable prices.
+            </p>
+
+            <p>
+                Find your style and enjoy shopping!
+            </p>
+
+            <p>
+                Fashion is not just a style, it is a way of life.
+            </p>
+
+            <p>
+                H<sub>2</sub>O inspired beauty care
+                and 50<sup>%</sup> discount offers!
+            </p>
+
+            <big>YOUR STYLE, YOUR IDENTITY!</big>
+
+            <pre>
+Fashion Store
+Customer First
+Style Forever
+            </pre>
+
+        </section>
+
+
+        <!-- FOOTER SECTION -->
+
+        <footer class="footer">
+
+            <div class="footer-content">
+
+                <div>
+                    <h3>ONLINE SHOPPING</h3>
+
+                    <ul>
+                        <li><a href="#men">Men</a></li>
+                        <li><a href="#women">Women</a></li>
+                        <li><a href="#kids">Kids</a></li>
+                        <li><a href="#beauty">Beauty</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h3>USEFUL LINKS</h3>
+
+                    <ol>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                    </ol>
+                </div>
+
+
+                <div>
+                    <h3>CONTACT US</h3>
+
+                    <p>Email: support@myntrastore.com</p>
+                    <p>Phone: 9876543210</p>
+
+                    <p>
+                        Follow us:
+                        <a href="https://www.instagram.com/" target="_blank">
+                            Instagram
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                &copy; 2026 Myntra Fashion Store.
+                All Rights Reserved.
+            </p>
+
+            <a href="#home">Back to Top ↑</a>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
